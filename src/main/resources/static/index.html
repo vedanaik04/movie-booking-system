@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Booking System</title>
+    <script defer src="/script.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI';
+            background: linear-gradient(to right, #0f172a, #1e293b);
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            margin-top: 30px;
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        select {
+            padding: 10px;
+            width: 60%;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 15px;
+            background: #3b82f6;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+
+        .seat {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            margin: 5px;
+            line-height: 35px;
+            background: #475569;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .selected {
+            background: #22c55e;
+        }
+
+        .card {
+            background: #334155;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🎬 Movie Booking System</h1>
+
+<div class="container">
+
+    <h3>Select Showtime</h3>
+    <select id="showtimeSelect"></select>
+
+   <h3>Select Seats</h3>
+<div id="seatContainer"></div>
+
+<p id="selectedSeatsText"></p>
+<p id="priceText"></p>
+
+    <button onclick="bookTickets()">🎟 Book Ticket</button>
+    <button onclick="resetSeats()">🔄 Reset All Seats</button>
+    <h2>📄 Booking History</h2>
+    <div id="content"></div>
+
+</div>
+
+</body>
+</html>
